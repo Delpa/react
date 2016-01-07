@@ -1,0 +1,4 @@
+#!/bin/sh
+browserify \
+--require jquery \
+--outfile public/js/vendor.js

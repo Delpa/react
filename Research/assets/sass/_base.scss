@@ -1,0 +1,19 @@
+$negro: #424242;
+$verde: #6bde2f;
+$rojo: #de2f2f;
+$morado: #c31794;
+
+
+body {
+    background-color: $negro;
+}
+p {
+    color: $verde;
+    font-size: 12px;
+}
+h1 {
+    color: $rojo;
+}
+h2 {
+    color: $morado;
+}
