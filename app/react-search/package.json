@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-vendor": "browserify --require react --require react-dom --outfile build/js/vendor.js",
-    "watch-js": "watchify --external react --external react-dom src/js/search.js --outfile build/js/script.js --poll --debug --verbose",
+    "watch-js": "watchify --external react --external react-dom src/js/app.js --outfile build/js/script.js --poll --debug --verbose",
     "sync": "browser-sync start --port 3000 --ui-port 3001 --files 'build/js/script.js, *.html' "
   },
   "browserify": {

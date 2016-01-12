@@ -1,4 +1,8 @@
-import React from 'react';
+import './components/containers/SearchItem/index';
+
+
+
+/*import React from 'react';
 import ReactDOM from 'react-dom';
 
 var TodoList = React.createClass({
@@ -36,7 +40,7 @@ var TodoApp = React.createClass({
   }
 });
 
-ReactDOM.render(<TodoApp />, document.getElementById('mount-point'));
+//ReactDOM.render(<TodoApp />, document.getElementById('mount-point'));
 
 
 /*
