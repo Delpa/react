@@ -17,9 +17,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     if File.exists? homesteadYamlPath then
-        Homestead.configure(config, YAML::load(File.read(homesteadYamlPath)), "Project"+File.basename(Dir.getwd))
+        Homestead.configure(config, YAML::load(File.read(homesteadYamlPath)))
     elsif File.exists? homesteadJsonPath then
-        Homestead.configure(config, JSON.parse(File.read(homesteadJsonPath)), "Project"+File.basename(Dir.getwd))
+        Homestead.configure(config, JSON.parse(File.read(homesteadJsonPath)))
     end
 
     if File.exists? afterScriptPath then
