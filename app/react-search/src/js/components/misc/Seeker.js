@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 
 export default class Seeker extends Component{
-    constructor(props){
-        super(props);
-    }
-    
     render() {
         const {
             value,

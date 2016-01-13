@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-vendor": "browserify --require react --require react-dom --outfile build/js/vendor.js",
-    "watch-js": "watchify --external react --external react-dom src/js/app.js --outfile build/js/script.js --poll --debug --verbose",
+    "build-vendor": "browserify --require react --require react-dom --require lodash --outfile build/js/vendor.js",
+    "watch-js": "watchify --external react --external react-dom --external lodash src/js/app.js --outfile build/js/script.js --poll --debug --verbose",
     "sync": "browser-sync start --port 3000 --ui-port 3001 --files 'build/js/script.js, *.html' "
   },
   "browserify": {
@@ -29,6 +29,7 @@
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.0",
     "browserify": "^12.0.1",
+    "lodash": "^4.0.0",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "watchify": "^3.6.1"
