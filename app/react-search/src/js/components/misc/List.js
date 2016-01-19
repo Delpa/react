@@ -4,12 +4,12 @@ export default class List extends Component{
     
     render() {
         const {
-            data
+            items
         } = this.props;
-        var item = function(data, i){
-            return (<li key={i}>{data}</li>);
-        };
-        return(<lu>{data.map(item)}</lu>
+		
+        var mapped_item = (item, i) => (<li key={i}>{item}</li>);
+ 
+        return(<lu>{data.map(mapped_item)}</lu>
         );
     }
 }
