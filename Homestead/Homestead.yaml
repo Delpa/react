@@ -16,8 +16,8 @@ folders:
       to: /home/vagrant/Code
 
 sites:
-    - map: react-search.app
-      to: /home/vagrant/Code/react-search
+    - map: react.app
+      to: /home/vagrant/Code/react-test
 
 databases:
     - homestead

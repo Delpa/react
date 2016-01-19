@@ -1,0 +1,38 @@
+{
+  "name": "react-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-vendor": "browserify --require react --require react-dom --require jquery --require socket.io --outfile public/js/vendor.js",
+    "watch-js": "watchify --external react --external react-dom --external jquery --external socket.io src/js/app.js --outfile public/js/script.js --poll --debug --verbose"
+	
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.0",
+    "browserify": "^12.0.1",
+    "express": "^4.13.3",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "socket.io": "^1.4.4",
+    "watchify": "^3.6.1"
+  }
+}
