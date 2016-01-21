@@ -7,7 +7,7 @@ export default class List extends Component{
             items
         } = this.props;
 		
-        var mapped_item = (item, i) => (<li key={i}>{item}</li>);
+        var mapped_item = (item, i) => (<li key={console.log(i)}>{item}</li>);
  
         return(<lu>{data.map(mapped_item)}</lu>
         );
