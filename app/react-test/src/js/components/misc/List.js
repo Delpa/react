@@ -8,5 +8,7 @@ export default class List extends Component{
         var mapped_item = (item, i) => (<li key={i} onClick={() => res(i)}>{item}</li>);
  		
         return(<lu>{_.map(items,mapped_item)}</lu>);
-    }
+    } 
+	
 }
+List.defaultProps = {res:()=>''};

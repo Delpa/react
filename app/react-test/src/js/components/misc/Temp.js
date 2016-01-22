@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
+import styles from './css.css';
+import Temp from './Temp';
 
-export default class Temp extends Component{
+
+export default class Select extends Component{
 	render(){
-		const{estilosheredados}=this.props;
 		return(
 			<div>
+				<input type="text" />
 				<ul>
-					<li className={estilosheredados}> item dfdfu</li>
-					<li>item dfdfd</li>
-					<li>item dfdfdft</li>
-					<li>item dfdc</li>
+					<li className="especial"> item u</li>
+					<li className={styles.especial_e}>item d</li>
+					<li>item t</li>
+					<li>item c</li>
+					<Temp estilosheredados={styles.especial_e}/>
 				</ul>
 			</div>);
 	}
