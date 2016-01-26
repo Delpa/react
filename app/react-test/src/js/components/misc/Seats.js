@@ -4,29 +4,23 @@ import _ from 'lodash';
 export default class Seats extends Component{
 	constructor(props){
 		super(props);
-		this.state={
-			enable: this.props.enable,
-			code: this.props.code,
-			state: false
-		};
 		this.toggleState= this.toggleState.bind(this);
 		
 	}
 	toggleState(){
-		if(this.state.enable==true){
-			if(this.state.state==false){
-				this.setState({state: true});
-			
+		if(this.props.enable==true){
+			if(this.props.isSelected==false){
+				this.props.res(this.props.code,true);
 			}
 			else{
-				this.setState({state: false});
+				this.props.res(this.props.code,false);
 			}
 		}
 	}
     render() {
-        const {state,code} = this.state;
+        const {code,isSelected} = this.props;
 		
-        return (<li onClick={this.toggleState}>{code} {state}</li>);
+        return (<li onClick={this.toggleState}>{code} {isSelected.toString()}</li>);
     } 
-
 }
+Seats.defaultProps = {res:()=>''};
